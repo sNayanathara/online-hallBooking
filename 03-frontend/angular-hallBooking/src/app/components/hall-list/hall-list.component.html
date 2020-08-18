@@ -1,0 +1,23 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Seating Capacity</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempHall of halls" >
+            <td>
+                <img src="{{tempHall.imageUrl}}" height="50"/>
+            </td>
+            <td>{{tempHall.name}}</td>
+            <td>{{tempHall.description}}</td>
+            <td>{{tempHall.unitPrice | currency: 'USD'}}</td>
+            <td>{{tempHall.seatingCapacity}}</td>
+        </tr>
+    </tbody>
+</table>

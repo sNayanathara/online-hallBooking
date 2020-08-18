@@ -1,0 +1,127 @@
+<div class="modal-header">
+    <h4 class="modal-title">Reservation Details</h4>
+    <button type="button" class="close"  class="btn btn-danger" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+<form [formGroup] = "reservationFormGroup">
+
+    <!-- customer details -->
+    <div formGroupName=" customerDetails" class="form-area">
+        <h3>Customer Details</h3>
+
+        <div class="row">
+            <div class="col-md-2"><label>Full Name</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="fullName" type="text" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Email</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="email" type="text" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>National Identity Card Number</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="NIC" type="text" required>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- credit card -->
+
+     <div formGroupName="creditCardDetails" class="form-area">
+        <h3>Credit Card</h3>
+
+        <div class="row">
+            <div class="col-md-2"><label>Card Type</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <select formControlName="cardType" required>
+                        <option >Visa</option>
+                        <option >Mastercard</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Name on Card</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="nameOnCard" type="text" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Card Number</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="cardNumber" type="text" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Security Code</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <input formControlName="securityCode" type="text" required>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Expiration Month</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <select formControlName="expirationMonth" required>
+                        <option >TO DO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-2"><label>Expiration Year</label></div>
+            <div class="col-md-9">
+                <div class="input-space">
+                    <select formControlName="expirationYear" required>
+                        <option >TO DO</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+</form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="open()">Submit Details</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

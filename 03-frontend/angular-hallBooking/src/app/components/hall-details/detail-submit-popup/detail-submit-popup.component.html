@@ -1,0 +1,149 @@
+<div class="modal-header">
+    <h4 class="modal-title">Reservation Details </h4>
+    <button type="button" class="close" class="btn btn-danger" aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="modal-body">
+    <div class="main-content page-m">
+        <div class="section-content section-content-p30">
+            <div class="container-fluid">
+                <form [formGroup]="reservationFormGroup" (ngSubmit)="open()">
+
+                    <!-- customer details -->
+                    <div formGroupName="customerDetails" class="form-area">
+                        <h4>Customer Details</h4>
+                    
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Full Name</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="fullName"
+                                        [ngClass]="{ 'is-invalid': submitted && fcd.fullName.errors }"
+                                        class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Email</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="email"
+                                        [ngClass]="{ 'is-invalid': submitted && fcd.email.errors }" class="form-control"
+                                        type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>NIC Number</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="NIC"
+                                        [ngClass]="{ 'is-invalid': submitted && fcd.NIC.errors }" class="form-control"
+                                        type="text" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- credit card -->
+
+                    <div formGroupName="creditCardDetails" class="form-area">
+                        <h4>Credit Card</h4>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Card Type</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <select formControlName="cardType"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.cardType.errors }"
+                                        class="form-control" required>
+                                        <option>Visa</option>
+                                        <option>Mastercard</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Name on Card</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="nameOnCard"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.nameOnCard.errors }"
+                                        class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Card Number</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="cardNumber"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.cardNumber.errors }"
+                                        class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Security Code</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <input formControlName="securityCode"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.securityCode.errors }"
+                                        class="form-control" type="text" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Expiration Month</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <select formControlName="expirationMonth"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.expirationMonth.errors }"
+                                        class="form-control" required>
+                                        <option>TO DO</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col">
+                                <label>Expiration Year</label>
+                                <!-- <div class="col-md-9"> -->
+                                <div class="input-space">
+                                    <select formControlName="expirationYear"
+                                        [ngClass]="{ 'is-invalid': submitted && fccd.expirationYear.errors }"
+                                        class="form-control" required>
+                                        <option>TO DO</option>
+                                        <!-- <option ng-repeat="year in years">{{year}}</option> -->
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-outline-primary">Submit Details</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
